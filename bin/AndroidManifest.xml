@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.horse.barrel"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.horse.barrel.Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.horse.barrel.BarrelRaceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.horse.barrel.FinalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.horse.barrel.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.horse.barrel.Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.horse.barrel.Home" />
+        </activity>
+        <activity
+            android:name="com.horse.barrel.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.horse.barrel.HighScore"
+            android:label="@string/title_activity_high_score"
+            android:parentActivityName="com.horse.barrel.Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.horse.barrel.Home" />
+        </activity>
+        <activity
+            android:name="com.horse.barrel.Person"
+            android:label="@string/title_activity_person" >
+        </activity>
+    </application>
+
+</manifest>
